@@ -2,6 +2,12 @@
 
 ## Introduction
 
+# Non-technical tips
+
+## Learn JS
+
+## Rubber Duck
+
 # Understanding your tools
 
 ## $0-$4

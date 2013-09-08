@@ -1,162 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>Digging, Debugging</title>
-	<meta name="description" content="Presentation for jQuery Conference Austin 2013 on debugging web-based applications">
-	<meta name="author" content="Brian Arnold">
+  <meta charset="utf-8">
+  <title>Digging, Debugging</title>
+  <meta name="description" content="Presentation for jQuery Conference Austin 2013 on debugging web-based applications">
+  <meta name="author" content="Brian Arnold">
 
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<!-- Styles for Reveal -->
-	<link rel="stylesheet" href="css/reveal.min.css">
-	<link rel="stylesheet" href="css/theme/sky.css" id="theme">
-	<link rel="stylesheet" href="css/brianarn.css">
+  <!-- Styles for Reveal -->
+  <link rel="stylesheet" href="css/reveal.min.css">
+  <link rel="stylesheet" href="css/theme/sky.css" id="theme">
+  <link rel="stylesheet" href="css/brianarn.css">
 
-	<!-- For syntax highlighting -->
-	<link rel="stylesheet" href="lib/css/docco.css">
+  <!-- For syntax highlighting -->
+  <link rel="stylesheet" href="lib/css/docco.css">
 
-	<!-- I guess we can be nice -->
-	<!--[if lt IE 9]>
-	<script src="lib/js/html5shiv.js"></script>
-	<![endif]-->
+  <!-- I guess we can be nice -->
+  <!--[if lt IE 9]>
+  <script src="lib/js/html5shiv.js"></script>
+  <![endif]-->
 </head>
 <body>
-	<div class="reveal">
-		<div class="slides">
-			<section>
-				<h1>Big title</h1>
-				<h2>Smaller title</h2>
-			</section>
-			<section>
-				<h2>Nice to meet you!</h2>
-				<p>
-					<a href="http://twitter.com/brianarn">@brianarn</a> | <a href="http://www.randomthink.net">randomthink.net</a>
-				</p>
-				<ul>
-					<li>Senior Software Engineer @ <a href="http://www.bazaarvoice.com">Bazaarvoice</a></li>
-					<li>Previously a Lead Support &amp; Senior Software Engineer at SitePen</li>
-					<li><a href="http://dojotoolkit.org">Dojo</a> core committer</li>
-					<li>Rock Band guitar expert</li>
-				</ul>
-			</section>
-			<section>
-				<h2>Outline</h2>
-				<ul>
-					<li>Stuff</li>
-					<li>Things</li>
-				</ul>
-			</section>
-			<section>
-				<section>
-					<p>Staggered Reveal</p>
-					<ul>
-						<li class="fragment">One</li>
-						<li class="fragment">Two</li>
-						<li class="fragment">Three</li>
-					</ul>
-				</section>
-			</section>
-			<section>
-				<section>
-					<h3>Quote</h3>
-					<p>Coming back to a project months/years later, dealing with several small, focused files is much, much easier.</p>
-					<blockquote>
-						<p>You don't write code for yourself, you write it for the moron who has to maintain it in a year.</p>
-						<p>More often than not, you are that moron.</p>
-					</blockquote>
-				</section>
-				<section>
-					<h3>Some code</h3>
-					<p>Intro to code</p>
-					<pre><code data-trim class="html">
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <section>
+          <h1>Digging, Debugging</h1>
+          <h2>Something better here</h2>
+        </section>
+        <section>
+          <h3>Brian Arnold</h3>
+          <p>
+            <a href="http://twitter.com/brianarn">@brianarn</a> | <a href="http://www.randomthink.net">randomthink.net</a>
+          </p>
+          <ul>
+            <li>Senior Software Engineer @ <a href="http://www.bazaarvoice.com">Bazaarvoice</a></li>
+            <li>Previously a Lead Support &amp; Senior Software Engineer at SitePen</li>
+            <li><a href="http://dojotoolkit.org">Dojo</a> core committer</li>
+            <li>Avid board gamer</li>
+            <li>Rock Band guitar expert</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Outline</h2>
+          <ul>
+            <li>Non-technical tips</li>
+            <li>Understanding the tools</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <section>
+          <p>Staggered Reveal</p>
+          <ul>
+            <li class="fragment">One</li>
+            <li class="fragment">Two</li>
+            <li class="fragment">Three</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h3>Quote</h3>
+          <p>Coming back to a project months/years later, dealing with several small, focused files is much, much easier.</p>
+          <blockquote>
+            <p>You don't write code for yourself, you write it for the moron who has to maintain it in a year.</p>
+            <p>More often than not, you are that moron.</p>
+          </blockquote>
+        </section>
+        <section>
+          <h3>Some code</h3>
+          <p>Intro to code</p>
+          <pre><code data-trim class="html">
 &lt;!DOCTYPE html>
 &lt;html>
-	&lt;head>
-		&lt;meta charset="UTF-8">
-		&lt;title>My Amazing App&lt;/title>
-	&lt;/head>
-	&lt;body>
-		&lt;script src="path/to/dojo.js"
-				data-dojo-config="deps: ['app'], async: true">&lt;/script>
-	&lt;/body>
+  &lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;title>My Amazing App&lt;/title>
+  &lt;/head>
+  &lt;body>
+    &lt;script src="path/to/dojo.js"
+        data-dojo-config="deps: ['app'], async: true">&lt;/script>
+  &lt;/body>
 &lt;/html>
-					</code></pre>
-				</section>
-			</section>
-			<section class="lower">
-				<section>
-					<h2>Less Screamy Headers</h2>
-				</section>
-				<section>
-					<h3>Even less screamy</h3>
-					<p>Content!</p>
-				</section>
-				<section>
-					<h3>Some JS</h3>
-					<pre><code data-trim class="javascript">
+          </code></pre>
+        </section>
+      </section>
+      <section class="lower">
+        <section>
+          <h2>Less Screamy Headers</h2>
+        </section>
+        <section>
+          <h3>Even less screamy</h3>
+          <p>Content!</p>
+        </section>
+        <section>
+          <h3>Some JS</h3>
+          <pre><code data-trim class="javascript">
 // Create a variable to store our module's value
 var myModule = (function(){
-	// Create our baseline module object
-	var module = {};
+  // Create our baseline module object
+  var module = {};
 
-	// Set some properties or methods
-	module.meaningOfLife = 42;
-	module.circleArea = function(radius){
-		return Math.PI * Math.pow(radius, 2);
-	};
+  // Set some properties or methods
+  module.meaningOfLife = 42;
+  module.circleArea = function(radius){
+    return Math.PI * Math.pow(radius, 2);
+  };
 
-	// Return it!
-	return module;
+  // Return it!
+  return module;
 })();
-					</code></pre>
-				</section>
-			</section>
-			<section>
-				<section>
-					<h2>Resources</h2>
-					<ul>
-						<li><a href="https://gist.github.com/desandro/4686136">Gist on "Why modules"</a></li>
-						<li><a href="http://wiki.commonjs.org/wiki/Modules/1.1">CommonJS Module spec</a></li>
-					</ul>
-				</section>
-			</section>
-		</div>
-		<footer>
-			<p>Digging, Debugging: Brian Arnold @ jQuery Conference Austin 2013</p>
-		</footer>
-	</div>
+          </code></pre>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h2>Resources</h2>
+          <ul>
+            <li><a href="https://gist.github.com/desandro/4686136">Gist on "Why modules"</a></li>
+            <li><a href="http://wiki.commonjs.org/wiki/Modules/1.1">CommonJS Module spec</a></li>
+          </ul>
+        </section>
+      </section>
+    </div>
+    <footer>
+      <p>Digging, Debugging: Brian Arnold @ jQuery Conference Austin 2013</p>
+    </footer>
+  </div>
 
-	<!-- Scripts yay -->
-	<script src="lib/js/head.min.js"></script>
-	<script src="js/reveal.min.js"></script>
-	<script>
-		// Full list of configuration options available here:
-		// https://github.com/hakimel/reveal.js#configuration
-		Reveal.initialize({
-			controls: true,
-			progress: true,
-			history: true,
-			center: true,
+  <!-- Scripts yay -->
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.min.js"></script>
+  <script>
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
 
-			theme: 'sky',
-			transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
-			transitionSpeed: 'fast', // default/fast/slow
+      theme: 'sky',
+      transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
+      transitionSpeed: 'fast', // default/fast/slow
 
-			// Optional libraries used to extend on reveal.js
-			dependencies: [
-				{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-				{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-				{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-				{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-				// { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-				// { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-				// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
-				// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
-			]
-		});
-	</script>
+      // Optional libraries used to extend on reveal.js
+      dependencies: [
+        { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+        { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        // { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        // { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        // { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+        // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+      ]
+    });
+  </script>
 </body>
 </html>
