@@ -27,10 +27,10 @@
   <div class="reveal">
     <div class="slides">
       <section>
-        <section>
-          <h1>Digging, Debugging</h1>
-          <h2>Something better here</h2>
-        </section>
+        <h1>Digging, Debugging</h1>
+        <h2>Something better here</h2>
+      </section>
+      <section>
         <section>
           <h3>Brian Arnold</h3>
           <p>
@@ -48,11 +48,122 @@
           <h2>Outline</h2>
           <ul>
             <li>Non-technical tips</li>
-            <li>Understanding the tools</li>
+            <li>Understand the tools</li>
+            <li>Techniques</li>
           </ul>
         </section>
       </section>
       <section>
+        <section>
+          <h1>Non-technical Tips</h1>
+        </section>
+        <section>
+          <h2>Be open to learning</h2>
+          <p>We are professional students</p>
+        </section>
+        <section>
+          <h2>Learn JavaScript</h2>
+          <h3>No, really, learn the core</h3>
+          <p>Read the spec, read JS: TDG thoroughly</p>
+          <p>TODO: Find stack image of JS/TGP here</p>
+        </section>
+        <section>
+          <h2>Rubber Duck</h2>
+          <ul>
+            <li>Colleagues</li>
+            <li>Friends at other shops</li>
+            <li>An actual rubber duck</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h1>Understand the tools</h1>
+        </section>
+        <section>
+          <h2>Command Line API</h2>
+          <p>Originally pioneered in Firebug, now fairly ubiquitous</p>
+          <p>Feature support varies, learn your environment</p>
+        </section>
+        <section>
+          <h2>Moving between Elements and Console</h2>
+          <ul>
+            <li><code>$0</code></li>
+            <li><code>$_</code></li>
+            <li><code>inspect</code></li>
+          </ul>
+        </section>
+        <section>
+          <h2>Detailed viewing</h2>
+          <ul>
+            <li><code>console.*</code></li>
+            <li><code>dir</code></li>
+            <li><code>copy</code></li>
+          </ul>
+        </section>
+        <section>
+          <h2>STOP THE PRESSES</h2>
+          <ul>
+            <li><code>debugger;</code></li>
+            <li>Breakpoints</li>
+            <li>Watch things</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Other types of breaks</h2>
+          <ul>
+            <li>Mutation and such TODO</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Sources</h2>
+          <ul>
+            <li>Fuzzy finder opening</li>
+            <li>Pretty printing</li>
+            <li>Varying break abilities</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Profiling</h2>
+          <ul>
+            <li>Memory</li>
+            <li>Runtime</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h1>Techniques</h1>
+          <h2>(Sometimes so hacky, but so good)</h2>
+        </section>
+        <section>
+          <h2>Use a style guide, damnit</h2>
+          <p>Inconsistently written code can be awful</p>
+          <p>Look into things like Idiomatic for a starting point, and EditorConfig to help enforce it</p>
+          <blockquote>
+            <p>You don't write code for yourself, you write it for the moron who has to maintain it in a year.</p>
+            <p>More often than not, you are that moron.</p>
+          </blockquote>
+        </section>
+        <section>
+          <h2>Breakpoint Actions</h2>
+          <p>Use and abuse of conditional breakpoints for fun and profit*</p>
+          <p>* There may not be profit</p>
+        </section>
+        <section>
+          <h2>Reading the stack</h2>
+          <p>Which code is mine? Look for anonymous functions.</p>
+          <p>You can also name function expressions (can leak in IE6)</p>
+        </section>
+        <section>
+          <h2>Digging through the stack</h2>
+          <p>Breakpoints hoooooooo</p>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h1>Reveal usage</h1>
+        </section>
         <section>
           <p>Staggered Reveal</p>
           <ul>
@@ -64,7 +175,7 @@
       </section>
       <section>
         <section>
-          <h3>Quote</h3>
+          <h2>Quote</h2>
           <p>Coming back to a project months/years later, dealing with several small, focused files is much, much easier.</p>
           <blockquote>
             <p>You don't write code for yourself, you write it for the moron who has to maintain it in a year.</p>
@@ -121,8 +232,10 @@ var myModule = (function(){
         <section>
           <h2>Resources</h2>
           <ul>
-            <li><a href="https://gist.github.com/desandro/4686136">Gist on "Why modules"</a></li>
-            <li><a href="http://wiki.commonjs.org/wiki/Modules/1.1">CommonJS Module spec</a></li>
+            <li><a href="http://discover-devtools.codeschool.com">Discover DevTools</a></li>
+            <li><a href="http://TODO">Command Line API (Chrome)</a></li>
+            <li><a href="http://TODO">Command Line API (Firebug)</a></li>
+            <li><a href="http://TODO">Console API (Chrome)</a></li>
           </ul>
         </section>
       </section>

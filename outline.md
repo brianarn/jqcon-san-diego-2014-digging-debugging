@@ -8,7 +8,7 @@
 
 ## Rubber Duck
 
-# Understanding your tools
+# Understand the tools
 
 ## $0-$4
 
